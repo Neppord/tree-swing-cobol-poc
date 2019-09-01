@@ -1,6 +1,10 @@
-module Main where
+#! /usr/bin/env stack
+-- stack --resolver lts-14.3 script
 
-import Lib
+import Cobol
+import Cobol.Eval
+import Data.Maybe
 
-main :: IO ()
-main = someFunc
+main = fromMaybe (return ()) program
+  where
+    program = evalProject "HelloWorld.cbl" example
