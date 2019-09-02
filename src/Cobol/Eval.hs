@@ -8,11 +8,16 @@ import Cobol.Ast
 
 initMemmory records = records
 
+-- check that key exists
+-- none existing keys should result in different error then empty field
 readMemmory key [] = Undefined
 readMemmory key (Record _ name _ value:records)
   | key == name = value
   | otherwise   = readMemmory key records
 
+-- check that
+--  * key exists
+--  * picure and value matches
 writeMemmory key value' [] = []
 writeMemmory key value' (Record level name picture value: memmory)
   | key == name  = Record level name picture value': memmory
