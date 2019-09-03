@@ -24,7 +24,7 @@ data Record
 
 data File = File
   { workingStorageSection:: [Record]
-  , procedureDevision:: [Section]
+  , procedureDivision:: [Section]
   }
 
 newtype Project = Project [(String, File)]

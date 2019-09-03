@@ -12,7 +12,7 @@ import Cobol.Eval
 
 emptyFile = File
   { workingStorageSection = []
-  , procedureDevision = []
+  , procedureDivision = []
   }
 
 example =
@@ -23,7 +23,7 @@ example =
                 [ Record 01 "phrase" "A(5)" (Str "Hello")
                 , Record 01 "subject" "A(11)" Undefined
                 ]
-            , procedureDevision =
+            , procedureDivision =
                 [ DefaultSection
                     [ Accept "subject" Environment 
                     , Display 
