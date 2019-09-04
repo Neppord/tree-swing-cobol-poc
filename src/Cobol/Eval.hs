@@ -19,9 +19,9 @@ readMemory key (Record _ name _ value:records)
 --  * key exists
 --  * picure and value matches
 writeMemory key value' [] = []
-writeMemory key value' (Record level name picture value: memmory)
-  | key == name  = Record level name picture value': memmory
-  | otherwise    = Record level name picture value: writeMemory key value' memmory
+writeMemory key value' (Record level name picture value: memory)
+  | key == name  = Record level name picture value': memory
+  | otherwise    = Record level name picture value: writeMemory key value' memory
 
 evalProject :: String -> Project -> Maybe (IO ())
 evalProject filename (Project files) =
