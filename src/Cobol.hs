@@ -10,10 +10,6 @@ import Cobol.Ast
 import Cobol.Eval
 
 
-emptyFile = File
-  { workingStorageSection = []
-  , procedureDivision = []
-  }
 
 example =
   Project

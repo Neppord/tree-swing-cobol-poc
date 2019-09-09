@@ -27,5 +27,10 @@ data File = File
   , procedureDivision:: [Section]
   }
 
+emptyFile = File
+  { workingStorageSection = []
+  , procedureDivision = []
+  }
+
 newtype Project = Project [(String, File)]
 
